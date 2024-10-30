@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desencriptar Mensaje</title>
+</head>
+<body>
+    <script>
+        function desencriptarMensaje(mensajeEncriptado) {
+            return mensajeEncriptado
+                .replace(/(\(\))/g, ' ')
+                .replace(/¬/g, 'ó')
+                .replace(/\?/g, 'a')
+                .replace(/\[/g, 'e')
+                .replace(/\\/g, 'i')
+                .replace(/~/g, 'o')
+                .replace(/\+/g, 'u')
+                .replace(/%/g, 'b')
+                .replace(/-/g, 'h')
+                .replace(/=/g, 't')
+                .replace(/__/g, 'z')
+                .replace(/\^/g, 'm')
+                .replace(/`/g, 'c')
+                .replace(/\]/g, 'n')
+                .replace(/{/g, 's')
+                .replace(/\*/g, 'p')
+                .replace(/\//g, 'l')
+                .replace(/;/g, 'f')
+                .replace(/\$/g, 'r')
+                .replace(/#/g, 'v')
+                .replace(/}/g, 'q')
+                .replace(/¿/g, 'y')
+                .replace(/!/g, 'j')
+                .replace(/¡/g, 'd');
+        }
+
+        const mensajeEncriptado = "^[()`~^*/?`[()^+`-~()#[$()/~()%\\[]()}+[()[{=~¿()=$?%?!?]¡~()¿()`¬^~()[{=~()?+^[]=?()^\\{()*~¡[$[{()¡[()?=[]`\\¬]()¿()[{;+[$__~()`~]=\\]+~";
+        const mensajeDesencriptado = desencriptarMensaje(mensajeEncriptado);
+        console.log(mensajeDesencriptado);
+        alert(mensajeDesencriptado);
+    </script>
+</body>
+</html>
